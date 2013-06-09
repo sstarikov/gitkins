@@ -1,6 +1,10 @@
 Gitkins::Application.routes.draw do
   root :to => "home#index"
 
+  match "/auth/:provider/callback" => "sessions#create_from_github"
+  match "/signout" => "sessions#destroy"
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

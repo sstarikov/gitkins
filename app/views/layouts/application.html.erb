@@ -17,36 +17,37 @@
             <a class="brand" href="#">GitKins</a>
             <div class="nav-collapse collapse">
                 <ul class="nav pull-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="icon-cog"></i>
-                            Settings
-                            <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
+                    <% if current_user %>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="icon-cog"></i>
+                                Settings
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
 
-                        </ul>
-
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="icon-user"></i>
-                            Username
-                            <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-
-                        </ul>
-                    </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="icon-user"></i>
+                                <%= current_user.name %>
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="active"><a href="<%= signout_path %>">Logout</a></li>
+                            </ul>
+                        </li>
+                    <% else %>
+                        <li class="active"><a href="/auth/github">Login</a></li>
+                    <% end %>
                 </ul>
                 <form class="navbar-search pull-right">
                     <input type="text" class="search-query" placeholder="Search">
                 </form>
             </div>
         </div>
-
     </div>
-
 </div>
 
 <%= yield %>
