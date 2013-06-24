@@ -1,4 +1,6 @@
 Gitkins::Application.routes.draw do
+  get "users/index"
+
   root :to => "home#index"
 
   match "/auth/:provider/callback" => "sessions#create_from_github"
