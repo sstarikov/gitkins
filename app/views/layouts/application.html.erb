@@ -42,22 +42,19 @@
                         <li class="active"><a href="/auth/github">Login</a></li>
                     <% end %>
                 </ul>
-                <form class="navbar-search pull-right">
-                    <input type="text" class="search-query" placeholder="Search">
-                </form>
             </div>
         </div>
     </div>
 </div>
-<div class="main">
-    <div class="container">
-        <div class="row">
-            <%= yield %>
+<div id="wrap">
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <%= yield %>
+            </div>
         </div>
     </div>
 </div>
-
-
 <div class="extra">
     <div class="container">
         <div class="row">
@@ -102,6 +99,7 @@
         </div>
     </div>
 </div>
+
 
 <div class="footer">
     <div class="container">
