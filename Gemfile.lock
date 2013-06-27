@@ -67,6 +67,7 @@ GEM
     mime-types (1.23)
     multi_json (1.7.3)
     multipart-post (1.2.0)
+    newrelic_rpm (3.6.4.122)
     oauth2 (0.8.1)
       faraday (~> 0.8)
       httpauth (~> 0.1)
@@ -144,6 +145,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails
   less-rails
+  newrelic_rpm
   omniauth-github
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
