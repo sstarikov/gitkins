@@ -10,6 +10,7 @@ gem 'sqlite3'
 gem "therubyracer"
 gem "less-rails"
 gem 'twitter-bootstrap-rails'
+gem 'newrelic_rpm'
 
 gem 'omniauth-github'
 gem "github_api"
