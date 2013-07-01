@@ -12,6 +12,7 @@ gem "less-rails"
 gem 'twitter-bootstrap-rails'
 
 gem 'omniauth-github'
+gem "github_api"
 
 gem 'uglifier', '>= 1.0.3'
 
